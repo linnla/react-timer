@@ -1,3 +1,4 @@
+import './Timer.css';
 import React from 'react';
 
 class Timer extends React.Component {
@@ -28,10 +29,15 @@ class Timer extends React.Component {
   
   render() {
     return (
-      <div>
-        <h1>
-          Count down is: {this.state.currentCount}
-        </h1>
+      <div className="top-container border-red">
+        <div className="main-container border-red">
+          <div className='ui inverted segment timer-container'>
+            <h1 className='ui header'>
+              Count down is: {this.state.currentCount}
+            </h1>
+            <button className='ui primary button massive ui button'>Reset Timer</button>
+          </div>
+        </div>
       </div>
     );
   }
